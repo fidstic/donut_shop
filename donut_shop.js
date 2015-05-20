@@ -1,32 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Donut Shop Output </title>
-</head>
-  <body>
-  <table id="do" width="100%">
-    <tr>
-        <td></td>
-        <td>6am</td>
-        <td>7am</td>
-        <td>8am</td>
-        <td>9am</td>
-        <td>10am</td>
-        <td>11am</td>
-        <td>12pm</td>
-        <td>1pm</td>
-        <td>2pm</td>
-        <td>3pm</td>
-        <td>4pm</td>
-        <td>total</td>
-  </table>
-  </body>
 
-
-</html>
-<script>
-
-  var Shop = function (name, average, min, max) {
+var Shop = function (name, average, min, max) {
     this.name = name;
     this.average = average;
     this.min = min;
@@ -76,6 +49,9 @@
   }
 
 
+  //var addStore = function () {
+    //}
+
   var dTown = new Shop("Downtown", 4.5, 8, 43);
   var cHill = new Shop("Capitol Hill", 2, 4, 37);
   var sLakeUnion = new Shop ("South Lake Union", 6.33, 9, 23);
@@ -96,8 +72,6 @@ console.log(ballard.total());
 
 
 
-</script>
 
 
-<!-- var times = ["", "6am","7am","8am","9am","10am","11am", "12pm", "1pm", "2pm","3pm","4pm", "5pm", "6pm"]; -->
 
