@@ -4,43 +4,8 @@
 <title>Donut Shop Output </title>
 </head>
   <body>
-  <table id="donut-shop" width="100%">
-    <tr>
-      <th></th>
-      <th scope = "col" class="hour" id="6am">6am</th>
-      <th scope = "col"class="hour" id="7am">7am</th>
-      <th scope = "col"class="hour" id="8am">8am</th>
-      <th scope = "col"class="hour" id="9am">9am</th>
-      <th scope = "col"class="hour" id="10am">10am</th>
-      <th scope = "col"class="hour" id="11am">11am</th>
-      <th scope = "col"class="hour" id="12pm">12pm</th>
-      <th scope = "col"class="hour" id="1pm">1pm</th>
-      <th scope = "col"class="hour" id="2pm">2pm</th>
-      <th scope = "col"class="hour" id="3pm">3pm</th>
-      <th scope = "col"class="hour" id="4pm">4pm</th>
-      <th scope = "col"class="hour" id="5pm">5pm</th>
-      <th scope = "col"class="hour" id="6pm">6pm</th>
-      <th scope = "col" id="total">Total</th>
-    </tr>
-    <tr>
-      <th scope = "row" class="shop" id="dtwon">Downtown</th>
-    </tr>
-    <tr>
-      <th scope = "row" class="shop" id="sLunion">South Lake Union</th>
-    </tr>
-    <tr>
-      <th scope = "row" class="shop" id="wWood">Wedgewood</th>
-    </tr>
-    <tr>
-      <th scope = "row" class="shop" id="ballard">Ballard</th>
-    </tr>
-    <tr>
-      <th scope = "row" class="shop" id="Chill">Capitol Hill</th>
-    </tr>
-
-
-
-
+  <table id="do" width="100%">
+  </table>
   </body>
 
 
@@ -62,12 +27,40 @@
 
   Shop.prototype.total = function () {
     var total = 0;
-
     for (var i = 0; i < 11; i++) {
       total += this.donuts();
     }
       return total;
     }
+
+
+
+  Shop.prototype.fillHead = function() {
+
+    var table = document.getElementById("do");
+    var row = document.createElement("tr");
+    var doShop = document.createElement("td");
+
+    doShop.textContent = this.name;
+    row.appendChild(doShop);
+    var total;
+
+    for (var i = 0; i < 11; i++) {
+      var hour = this.donuts();
+      var cell = document.createElement("td");
+      cell.textContent = hour;
+      row.appendChild(cell);
+      //total += hour;
+    }
+
+    var cell = document.createElement("td");
+    perDay = document.createTextNode(this.total());
+    cell.appendChild(perDay);
+    row.appendChild(cell);
+    table.appendChild(row);
+
+  }
+
 
   var dTown = new Shop("Downtown", 4.5, 8, 43);
   var cHill = new Shop("Capitol Hill", 2, 4, 37);
@@ -75,10 +68,13 @@
   var wWood = new Shop ("Wedgewood", 1.25, 2, 28);
   var ballard = new Shop ("Ballard", 3.75, 8, 58);
 
+dTown.fillHead();
+cHill.fillHead();
+sLakeUnion.fillHead();
+wWood.fillHead();
+ballard.fillHead();
 
-
-
-console.log(dTown.total());
+console.log(dTown.donuts());
 console.log(cHill.total());
 console.log(sLakeUnion.total());
 console.log(wWood.total());
@@ -89,5 +85,5 @@ console.log(ballard.total());
 </script>
 
 
-
+<!-- var times = ["", "6am","7am","8am","9am","10am","11am", "12pm", "1pm", "2pm","3pm","4pm", "5pm", "6pm"]; -->
 
