@@ -14,7 +14,7 @@ var Shop = function (name, average, min, max) {
 
   Shop.prototype.total = function () {
     var total = 0;
-    for (var i = 0; i < 12; i++) {
+    for (var i = 0; i < 11; i++) {
       total += this.donuts();
     }
       return total;
@@ -49,7 +49,6 @@ var Shop = function (name, average, min, max) {
     }
 
     var locations = [];
-    //locations.push(dTown, cHill, sLakeUnion, wWood, ballard);
     locations.push(new Shop("Downtown", 4.5, 8, 43));
     locations.push(new Shop("Capitol Hill", 2, 4, 37));
     locations.push(new Shop("South Lake Union", 6.33, 9, 23));
@@ -63,23 +62,16 @@ var Shop = function (name, average, min, max) {
 
   var NewLocation = function () {
     var newShop = document.getElementById("location").value;
-    console.log(newShop);
-    console.log(document.getElementById("location").value);
-    var maxHour = document.getElementById("maxCust").value;
-    console.log(maxHour.type);
-    console.log(maxHour);
-    console.log(maxHour + 1);
-    console.log(maxHour = parseInt(maxHour));
-    console.log(maxHour + 1);
-    var minHour = document.getElementById("minCust").value;
-    var ave = document.getElementById("aveCust").value;
-
-    var newDoShop = new Shop(newShop, maxHour, minHour, ave)
-    locations.push(newDoShop)
+    var ave = parseInt(document.getElementById("aveCust").value);
+    var minHour = parseInt(document.getElementById("minCust").value);
+    var maxHour = parseInt(document.getElementById("maxCust").value);
+    var newDoShop = new Shop(newShop, ave, minHour, maxHour)
+    locations.push(newDoShop.donuts());
     newDoShop.fillHead();
 }
 
   document.getElementById("inputButton").addEventListener('click', NewLocation, false);
+
 
 
 
