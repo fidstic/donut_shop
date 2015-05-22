@@ -8,14 +8,14 @@
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <section>
-  <h1 class="title"> Donut Output Calculator</h1>
-  </section>
+
+  <header class="title"> Donut Output Calculator</header>
+
   <h1 class="function">Top Pot Donut Production</h1>
-    <p class="paragraph">This table calculates the approximate amount of donuts a specific Top Pot Donut store should produce. The number is calculated using a maximum and minimum amount of customers per hour, and the amount of donuts the average customer consumes at a location.</p>
-  </section>
+
   <section>
-<table id="do" width="80%">
+    <p class="paragraph">This table calculates the approximate amount of donuts a specific Top Pot Donut store should produce. The number is calculated using a maximum and minimum amount of customers per hour, and the amount of donuts the average customer consumes at a location.</p>
+    <table id="do">
     <th class="tableHead">
     <tr class="times-row">
       <td id="locationHead">LOCATION</td>
@@ -30,13 +30,13 @@
       <td>2pm</td>
       <td>3pm</td>
       <td>4pm</td>
-      <td>total</td>
+      <td id="total ">TOTAL</td>
     </tr>
     </th>
   </table>
   </section>
    <h1 class="updater">Location updater</h1>
-    <section id="updateHead">
+    <section class="updateHead">
     <p id="locateTitle">Enter New Location Name</p>
     <input id="location" type="text" name="location"/>
     <p>Enter Maximum Amount of Customers (per hour)</p>
