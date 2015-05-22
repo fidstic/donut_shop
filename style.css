@@ -1,5 +1,86 @@
+/*add a reset to css page.
+*/
+
 
 body {
-      font-family: arial;          }
-      background-color: rgb(255,183,67);
+      background-color: #E5FBFF;
+      background-repeat: no-repeat;
+      font-family: 'PT Sans Narrow', sans-serif;
+        color: #171A21;
+        padding: 50px;
+        }
+
+.title {
+        background-color: #D3F8FF;
+        color: #276672;
+        text-shadow: 1px 1px 1px #000000;
+        border: 4px solid;
+        width: 400px;
+        padding: 10px;
+        margin: 20px auto 20px auto;
+        font-size: 300%;
+        text-align: center;
+        }
+
+img.align-left {
+        float: left;
+        margin-right: 8px;
 }
+img.small {
+        width: 100px;
+        height: 152px;
+}
+
+
+.function, .updater{
+        text-align: center;
+        text-shadow:1px 1px 1px #000000;
+        color: #276672;
+        font-size: 200%;
+        }
+
+tr>td {
+        background-color: #BCD6DB;
+        border: 2px groove;
+        margin: 20px auto. 20px auto;
+        }
+
+.paragraph{
+        margin: 0 auto 10px auto;
+        width: 800px;
+        padding: 40 40;
+        font-size: 125%;
+        text-align: left;
+}
+
+
+#do {
+        background-image: url(http://s3.amazonaws.com/spoonflower/public/design_thumbnails/0198/7717/rrrrrrrrrrrr45x36_150_shop_preview.png);
+        margin: 0 auto 0 auto;
+        width: 800px;
+        padding: 5px 10px 10px 10px ;
+
+}
+
+#locationHead {
+        text-align: center;
+}
+
+
+
+#updateHead {
+        text-align: center;
+        background-color: #B2F3FF;
+        margin: 0 auto 0 auto;
+        width: 288px;
+        border: 2px solid #2C323F;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 2px 2px 2px 3px #000000;
+}
+
+button {
+        background-color: #92BCEA;
+        margin: 5px;
+}
+
+
