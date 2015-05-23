@@ -8,46 +8,48 @@
 <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
-  <header class="title"> Donut Output Calculator</header>
-
+<header>
+  <p1 class="title"> Donut Output Calculator</p1>
+</header>
   <h1 class="function">Top Pot Donut Production</h1>
+  <section class="top">
+  <p class="paragraph">This table calculates the approximate amount of donuts a specific Top Pot Donut store should produce. The number is calculated using a maximum and minimum amount of customers per hour, and the amount of donuts the average customer consumes at a location.</p>
+  <table id="do">
+  <th class="tableHead">
+  <tr class="times-row">
+    <td id="locationHead">LOCATION</td>
+    <td>6am</td>
+    <td>7am</td>
+    <td>8am</td>
+    <td>9am</td>
+    <td>10am</td>
+    <td>11am</td>
+    <td>12pm</td>
+    <td>1pm</td>
+    <td>2pm</td>
+    <td>3pm</td>
+    <td>4pm</td>
+    <td id="total ">TOTAL</td>
+  </tr>
+  </th>
+</table>
+</section>
+<section class="updateHead">
+  <h1 class="updater">Location updater</h1>
+</section>
 
-  <section>
-    <p class="paragraph">This table calculates the approximate amount of donuts a specific Top Pot Donut store should produce. The number is calculated using a maximum and minimum amount of customers per hour, and the amount of donuts the average customer consumes at a location.</p>
-    <table id="do">
-    <th class="tableHead">
-    <tr class="times-row">
-      <td id="locationHead">LOCATION</td>
-      <td>6am</td>
-      <td>7am</td>
-      <td>8am</td>
-      <td>9am</td>
-      <td>10am</td>
-      <td>11am</td>
-      <td>12pm</td>
-      <td>1pm</td>
-      <td>2pm</td>
-      <td>3pm</td>
-      <td>4pm</td>
-      <td id="total ">TOTAL</td>
-    </tr>
-    </th>
-  </table>
-  </section>
-   <h1 class="updater">Location updater</h1>
-    <section class="updateHead">
-    <p id="locateTitle">Enter New Location Name</p>
-    <input id="location" type="text" name="location"/>
-    <p>Enter Maximum Amount of Customers (per hour)</p>
-    <input id="maxCust" type="number" name="maxCust"/>
-    <p>Enter Minimum Amount of Customers (per hour)</p>
-    <input id="minCust" type="number" name="minCust"/>
-    <p>Enter Average Amount of Donuts per Customer</p>
-    <input id="aveCust" type="number" name="aveCust"/>
-    <p></p>
-      <button id="inputButton">submit</button>
-  </section>
+<section class="input">
+  <p id="locateTitle">Enter New Location Name</p>
+  <input id="location" type="text" name="location"/>
+  <p>Enter Maximum Amount of Customers (per hour)</p>
+  <input id="maxCust" type="number" name="maxCust"/>
+  <p>Enter Minimum Amount of Customers (per hour)</p>
+  <input id="minCust" type="number" name="minCust"/>
+  <p>Enter Average Amount of Donuts per Customer</p>
+  <input id="aveCust" type="number" name="aveCust"/>
+  <p></p>
+  <button id="inputButton">submit</button>
+</section>
 
 
   <script type="text/javascript" src="donut_shop.js"> </script>
