@@ -70,7 +70,26 @@ var Shop = function (name, average, min, max) {
     newDoShop.fillHead();
 }
 
-  document.getElementById("inputButton").addEventListener('click', NewLocation, false);
+function rotateText(el,clr){
+  var elem = document.getElementById(el);
+  elem.style.background = clr;
+}
+
+
+
+/*var DeleteLocation = function () {
+    var delShop = document.getElementById("delLocate")
+    if (delShop == locations[k]) {
+      locations.removeChild(
+
+    }
+}*/
+
+  document.getElementById("inputButton").addEventListener('click', NewLocation, rotateText, false);
+  //document.getElementById("inputButton").addEventListener('click', textRotate(".paragraph","#9DCEFF"), false);
+
+
+
 
 
 
